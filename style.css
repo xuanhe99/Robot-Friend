@@ -1,0 +1,230 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+/* To center the robot horizontally */
+.robots {
+	display: flex;
+	justify-content: center;
+}
+
+/* Defines robot color */
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+}
+
+/* Defines head */
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	display: flex;
+}
+
+/* Defines eyes */
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.left_eye { 
+	position: relative; 
+	top: 60px; 
+	left: 45px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 60px; 
+	left: 115px; 
+}
+
+/* Defines a facial mask for the robot */
+.mask {
+	position: relative;
+	top: 65px;
+	width: 130px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+/* Defines two strings for the mask */
+
+#upstring {
+	position: absolute;
+	width: 200px;
+	height: 2px;
+	background-color: white;
+	left: -35px;
+	top: 15px;
+}
+#downstring {
+	position: absolute;
+	width: 200px;
+	height: 2px;
+	background-color: white;
+	left: -35px;
+	top: 50px;
+}
+
+/* To increase width while mouse hovering robot's head */
+.head:hover{
+	width: 300px;
+	transition: width 1s;
+}
+
+/* To hide the mask while mouse hovering robot's head */
+.head:hover div[class="mask"]{
+	visibility: hidden;
+}
+
+/* Defines dimensions for upper_body (left arm + right arm + torso) */
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+} 
+
+/* Defines left/right arms */
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+	transform-origin: top;
+} 
+
+/* Defines an animation(waving to the client) to the left arm */
+.left_arm { 
+	margin-right: 10px; 
+	transition: transform 0.3s;
+	-webkit-transform: rotate(160deg);
+	-moz-transform: rotate(160deg);
+	-o-transform: rotate(160deg);
+	-ms-transform: rotate(160deg);
+	transform: rotate(160deg);
+	animation-duration: 2s;
+	animation-name: wave;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+} 
+
+@keyframes wave {
+	20% {
+		-webkit-transform: rotate(130deg);
+		-moz-transform: rotate(130deg);
+		-o-transform: rotate(130deg);
+		-ms-transform: rotate(130deg);
+		transform: rotate(130deg);	
+	}
+	30% {
+		-webkit-transform: rotate(160deg);
+		-moz-transform: rotate(160deg);
+		-o-transform: rotate(160deg);
+		-ms-transform: rotate(160deg);
+		transform: rotate(160deg);
+		}
+	40% {
+		-webkit-transform: rotate(130deg);
+		-moz-transform: rotate(130deg);
+		-o-transform: rotate(130deg);
+		-ms-transform: rotate(130deg);
+		transform: rotate(130deg);	
+	}
+	50% {
+		-webkit-transform: rotate(160deg);
+		-moz-transform: rotate(160deg);
+		-o-transform: rotate(160deg);
+		-ms-transform: rotate(160deg);
+		transform: rotate(160deg);
+		}
+	60% {
+		-webkit-transform: rotate(130deg);
+		-moz-transform: rotate(130deg);
+		-o-transform: rotate(130deg);
+		-ms-transform: rotate(130deg);
+		transform: rotate(130deg);	
+
+	}
+}
+
+.right_arm { 
+	margin-left: 10px; 
+	transition: transform 0.5s;
+} 
+
+/* To rotate right arm while mouse hovering it  */
+.right_arm:hover {
+		-webkit-transform: rotate(-160deg);
+		-moz-transform: rotate(-160deg);
+		-o-transform: rotate(-160deg);
+		-ms-transform: rotate(-160deg);
+		transform: rotate(-160deg);	
+}
+
+/* Defines torso */
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+/* Defines demensions for lower_body(left leg + right leg) */
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	margin: 0 auto;
+    display: flex;
+} 
+
+/* Defines left/right leg */
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.right_leg { 
+	margin-left: 30px; 
+}
+
+/* To ratate left/right leg while mouse hovering it */
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg:hover {
+	-webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+
+
+
+
+
+
